@@ -2,12 +2,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixel Posh - Premium Fashion Collection</title>
+    <title>Made For You - Premium Fashion Collection</title>
     <meta
       name="description"
       content="Discover our curated collection of premium clothing including hoods, tops, joggers, dresses, and handcrafted crochet bags. Fashion that speaks your style."
     />
-    <meta name="author" content="Pixel Posh Fashion" />
+    <meta name="author" content="Made For You" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,25 +17,30 @@
       rel="stylesheet"
     />
 
-    <meta property="og:title" content="pixel-posh-shop" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Made For You" />
+    <meta property="og:description" content="Made For You" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta
-      name="twitter:image"
-      content="https://lovable.dev/opengraph-image-p98pqg.png"
-    />
 
     <link rel="stylesheet" crossorigin="" href="/assets/index-CMm3PHXV.css" />
+    <script src="assets/index.js"></script>
     <style>
       html {
         scroll-behavior: smooth;
+      }
+      .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        background: white;
+        width: 100%;
+        text-decoration: none;
+      }
+      .mobile-nav button {
+        width: 100%;
+        text-align: left;
+        border: none;
       }
     </style>
   </head>
@@ -90,62 +95,13 @@
                     <path d="M3 6h18"></path>
                     <path d="M16 10a4 4 0 0 1-8 0"></path>
                   </svg>
-                  <span>Pixel Posh</span>
+                  <span>Made For You</span>
                 </button>
               </div>
               <div class="hidden lg:block">
                 <div class="ml-10 flex items-baseline space-x-8">
-                  <button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-secondary border-b-2 border-secondary"
-                    aria-current="page"
-                  >
-                    All Products</button
-                  ><button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-foreground hover:border-b-2 hover:border-muted"
-                  >
-                    Hoodies</button
-                  ><button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-foreground hover:border-b-2 hover:border-muted"
-                  >
-                    Tops</button
-                  ><button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-foreground hover:border-b-2 hover:border-muted"
-                  >
-                    Joggers</button
-                  ><button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-foreground hover:border-b-2 hover:border-muted"
-                  >
-                    Dresses</button
-                  ><button
-                    class="px-3 py-2 text-sm font-medium transition-all duration-200 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background rounded-md text-foreground hover:border-b-2 hover:border-muted"
-                  >
-                    Bags
-                  </button>
+                  <button>+254 799 856601</button>
                 </div>
-              </div>
-              <div class="lg:hidden">
-                <button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 w-10 text-foreground hover:text-secondary hover:bg-muted"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation menu"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-menu w-6 h-6"
-                  >
-                    <line x1="4" x2="20" y1="12" y2="12"></line>
-                    <line x1="4" x2="20" y1="6" y2="6"></line>
-                    <line x1="4" x2="20" y1="18" y2="18"></line>
-                  </svg>
-                </button>
               </div>
             </div>
           </nav>
@@ -269,67 +225,46 @@
                       every style and occasion.
                     </p>
                   </div>
-                  <div class="flex flex-wrap justify-center gap-3 lg:gap-4">
+                  <div
+                    id="filter"
+                    class="flex flex-wrap justify-center gap-3 lg:gap-4"
+                  >
                     <button
-                      class="category-pill group active"
+                      class="category-pill group"
                       aria-pressed="true"
                       aria-label="Filter by All Products - 18 products"
                     >
-                      <span class="font-medium">All Products</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-primary-foreground text-primary"
-                        >18</span
-                      ></button
+                      <span class="font-medium">All Products</span></button
                     ><button
                       class="category-pill group"
                       aria-pressed="false"
                       aria-label="Filter by Hoodies - 3 products"
                     >
-                      <span class="font-medium">Hoodies</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-muted text-muted-foreground group-hover:bg-foreground/10"
-                        >3</span
-                      ></button
+                      <span class="font-medium">Hoodies</span></button
                     ><button
                       class="category-pill group"
                       aria-pressed="false"
                       aria-label="Filter by Tops - 4 products"
                     >
-                      <span class="font-medium">Tops</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-muted text-muted-foreground group-hover:bg-foreground/10"
-                        >4</span
-                      ></button
+                      <span class="font-medium">Tops</span></button
                     ><button
                       class="category-pill group"
                       aria-pressed="false"
                       aria-label="Filter by Joggers - 3 products"
                     >
-                      <span class="font-medium">Joggers</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-muted text-muted-foreground group-hover:bg-foreground/10"
-                        >3</span
-                      ></button
+                      <span class="font-medium">Joggers</span></button
                     ><button
                       class="category-pill group"
                       aria-pressed="false"
                       aria-label="Filter by Dresses - 4 products"
                     >
-                      <span class="font-medium">Dresses</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-muted text-muted-foreground group-hover:bg-foreground/10"
-                        >4</span
-                      ></button
+                      <span class="font-medium">Dresses</span></button
                     ><button
                       class="category-pill group"
                       aria-pressed="false"
                       aria-label="Filter by Crochet Bags - 4 products"
                     >
-                      <span class="font-medium">Crochet Bags</span
-                      ><span
-                        class="ml-2 px-2 py-1 rounded-full text-xs font-medium transition-colors duration-200 bg-muted text-muted-foreground group-hover:bg-foreground/10"
-                        >4</span
-                      >
+                      <span class="font-medium">Crochet Bags</span>
                     </button>
                   </div>
                 </div>
@@ -343,7 +278,7 @@
                 aria-modal="true"
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
-                style="display: none"
+                style="display: none; overflow-y: scroll"
               >
                 <div
                   class="relative bg-card rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-modal animate-modal-in"
@@ -429,10 +364,9 @@
                             stroke-linejoin="round"
                             class="lucide lucide-message-circle w-5 h-5 mr-3 group-hover/btn:scale-110 transition-transform duration-200"
                           >
-                            <path
-                              d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"
-                            ></path></svg
-                          >Order via WhatsApp
+                            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                          </svg>
+                          Order via WhatsApp
                         </button>
                         <p
                           class="text-xs text-muted-foreground mt-2 text-center"
@@ -461,11 +395,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Premium Cotton Hoodie"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -533,8 +468,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -547,11 +483,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Oversized Comfort Hood"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -619,8 +556,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -633,11 +571,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Minimalist Zip Hoodie"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -705,8 +644,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -719,11 +659,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Essential Cotton Tee"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -791,8 +732,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -805,11 +747,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Vintage Wash Crew"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -877,8 +820,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -891,11 +835,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Ribbed Tank Top"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -963,8 +908,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -977,11 +923,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Long Sleeve Basic"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -1049,8 +996,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1063,11 +1011,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Comfort Fleece Joggers"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -1135,8 +1084,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1149,11 +1099,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for High-Waist Sweatpants"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -1221,8 +1172,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1235,11 +1187,12 @@
                         class="relative w-full h-full focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-card group-hover:ring-2 group-hover:ring-secondary/50 transition-all duration-300"
                         aria-label="View details for Slim Fit Track Pants"
                       >
-                        <div
-                          class="w-full h-full flex items-center justify-center bg-muted text-muted-foreground"
-                        >
-                          <span class="text-sm">Image unavailable</span>
-                        </div>
+                        <img
+                          src="images/hoodie.jpg"
+                          alt="Bohemian crochet shoulder bag with fringe"
+                          class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
+                          loading="lazy"
+                        />
                         <div
                           class="absolute inset-0 bg-gradient-card opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         >
@@ -1307,8 +1260,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1322,7 +1276,7 @@
                         aria-label="View details for Midi Wrap Dress"
                       >
                         <img
-                          src="/api/placeholder/400/600"
+                          src="images/hoodie.jpg"
                           alt="Elegant midi wrap dress in flowing fabric"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1394,8 +1348,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1409,7 +1364,7 @@
                         aria-label="View details for Casual Shirt Dress"
                       >
                         <img
-                          src="/api/placeholder/400/600"
+                          src="images/hoodie.jpg"
                           alt="Casual shirt dress with button front"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1481,8 +1436,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1496,7 +1452,7 @@
                         aria-label="View details for Knit Sweater Dress"
                       >
                         <img
-                          src="/api/placeholder/400/600"
+                          src="images/hoodie.jpg"
                           alt="Cozy knit sweater dress with relaxed fit"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1568,8 +1524,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1583,7 +1540,7 @@
                         aria-label="View details for Floral Summer Dress"
                       >
                         <img
-                          src="/api/placeholder/400/600"
+                          src="images/hoodie.jpg"
                           alt="Light floral print summer dress"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1655,8 +1612,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1670,7 +1628,7 @@
                         aria-label="View details for Handwoven Tote Bag"
                       >
                         <img
-                          src="/api/placeholder/400/400"
+                          src="images/hoodie.jpg"
                           alt="Handwoven crochet tote bag with intricate pattern"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1742,8 +1700,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1757,7 +1716,7 @@
                         aria-label="View details for Mini Crochet Crossbody"
                       >
                         <img
-                          src="/api/placeholder/400/400"
+                          src="images/hoodie.jpg"
                           alt="Mini crochet crossbody bag"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1829,8 +1788,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1844,7 +1804,7 @@
                         aria-label="View details for Market Mesh Bag"
                       >
                         <img
-                          src="/api/placeholder/400/400"
+                          src="images/hoodie.jpg"
                           alt="Eco-friendly crochet mesh market bag"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -1916,8 +1876,9 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
@@ -1931,7 +1892,7 @@
                         aria-label="View details for Bohemian Shoulder Bag"
                       >
                         <img
-                          src="/api/placeholder/400/400"
+                          src="images/hoodie.jpg"
                           alt="Bohemian crochet shoulder bag with fringe"
                           class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 opacity-0"
                           loading="lazy"
@@ -2003,36 +1964,12 @@
                           stroke-linejoin="round"
                           class="lucide lucide-message-circle w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
                         >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Make Order
+                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                        Make Order
                       </button>
                     </div>
                   </article>
-                </div>
-                <div
-                  class="flex items-center justify-center mt-8 text-muted-foreground"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-package w-4 h-4 mr-2"
-                  >
-                    <path
-                      d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
-                    ></path>
-                    <path d="M12 22V12"></path>
-                    <path
-                      d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"
-                    ></path>
-                    <path d="m7.5 4.27 9 5.15"></path></svg
-                  ><span class="text-sm">18 products found</span>
                 </div>
               </div>
             </div>
@@ -2049,9 +1986,9 @@
                   <p
                     class="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
                   >
-                    We're passionate about bringing you premium fashion pieces
-                    that combine style, comfort, and quality. From cozy hoodies
-                    to elegant dresses and handcrafted accessories, our curated
+                    We're passionate about bringing you fashion pieces that
+                    combine style, comfort, and quality. From cozy hoodies to
+                    elegant dresses and handcrafted accessories, our curated
                     collection speaks to your unique style.
                   </p>
                 </div>
@@ -2226,29 +2163,10 @@
                             4
                           </div>
                           <p class="text-muted-foreground">
-                            We'll confirm your order and arrange delivery within
-                            24-48 hours
+                            We'll confirm your order and arrange delivery
                           </p>
                         </div>
                       </div>
-                      <button
-                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 whatsapp-btn group/btn"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-message-circle w-5 h-5 mr-2 group-hover/btn:scale-110 transition-transform duration-200"
-                        >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                        >Contact Us
-                      </button>
                     </div>
                     <div class="text-center lg:text-right">
                       <div
@@ -2260,7 +2178,7 @@
                             <div
                               class="w-2 h-2 bg-fashion-charcoal rounded-full"
                             ></div>
-                            <span>Premium quality materials</span>
+                            <span>Quality materials</span>
                           </li>
                           <li class="flex items-center space-x-2">
                             <div
@@ -2278,7 +2196,7 @@
                             <div
                               class="w-2 h-2 bg-fashion-charcoal rounded-full"
                             ></div>
-                            <span>Competitive pricing</span>
+                            <span>Affordable pricing</span>
                           </li>
                         </ul>
                       </div>
@@ -2294,7 +2212,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div class="space-y-4">
                 <h3 class="text-2xl font-fashion font-bold text-secondary">
-                  Pixel Posh
+                  Made For You
                 </h3>
                 <p class="text-gray-300 leading-relaxed">
                   Premium fashion pieces that combine style, comfort, and
@@ -2371,51 +2289,10 @@
                     >
                       <path
                         d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                      ></path></svg
-                  ></a>
+                      ></path>
+                    </svg>
+                  </a>
                 </div>
-              </div>
-              <div class="space-y-4">
-                <h4 class="text-lg font-semibold text-white">Categories</h4>
-                <nav>
-                  <ul class="space-y-2">
-                    <li>
-                      <button
-                        class="text-gray-300 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                      >
-                        Hoodies
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        class="text-gray-300 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                      >
-                        Tops
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        class="text-gray-300 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                      >
-                        Joggers
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        class="text-gray-300 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                      >
-                        Dresses
-                      </button>
-                    </li>
-                    <li>
-                      <button
-                        class="text-gray-300 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                      >
-                        Bags
-                      </button>
-                    </li>
-                  </ul>
-                </nav>
               </div>
               <div class="space-y-4">
                 <h4 class="text-lg font-semibold text-white">Contact</h4>
@@ -2436,8 +2313,9 @@
                       stroke-linejoin="round"
                       class="lucide lucide-message-circle w-5 h-5 group-hover:scale-110 transition-transform duration-200"
                     >
-                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg
-                    ><span>+254 799 856 601</span>
+                      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                    </svg>
+                    <span>+254 799 856601</span>
                   </button>
                   <div class="flex items-center space-x-3 text-gray-300">
                     <svg
@@ -2455,61 +2333,9 @@
                       <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                       <path
                         d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                      ></path></svg
-                    ><span>hello@pixelposh.co.ke</span>
-                  </div>
-                  <div class="flex items-center space-x-3 text-gray-300">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-map-pin w-5 h-5"
-                    >
-                      <path
-                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
                       ></path>
-                      <circle cx="12" cy="10" r="3"></circle></svg
-                    ><span>Nairobi, Kenya</span>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-4">
-                <h4 class="text-lg font-semibold text-white">Business Hours</h4>
-                <div class="space-y-2 text-gray-300">
-                  <div class="flex items-start space-x-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-clock w-5 h-5 mt-0.5"
-                    >
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <div>
-                      <p class="font-medium">Monday - Friday</p>
-                      <p class="text-sm">9:00 AM - 6:00 PM</p>
-                    </div>
-                  </div>
-                  <div class="ml-8">
-                    <p class="font-medium">Saturday</p>
-                    <p class="text-sm">10:00 AM - 4:00 PM</p>
-                  </div>
-                  <div class="ml-8">
-                    <p class="font-medium">Sunday</p>
-                    <p class="text-sm">Closed</p>
+                    <span>hello@pixelposh.co.ke</span>
                   </div>
                 </div>
               </div>
@@ -2519,28 +2345,43 @@
                 class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
               >
                 <p class="text-gray-400 text-sm">
-                  © 2025 Pixel Posh. All rights reserved.
+                  © 2025 Made For You. All rights reserved.
                 </p>
-                <div class="flex space-x-6 text-sm">
-                  <a
-                    href="#privacy"
-                    class="text-gray-400 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                    >Privacy Policy</a
-                  ><a
-                    href="#terms"
-                    class="text-gray-400 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                    >Terms of Service</a
-                  ><a
-                    href="#returns"
-                    class="text-gray-400 hover:text-secondary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-fashion-charcoal rounded"
-                    >Returns</a
-                  >
-                </div>
               </div>
             </div>
           </div>
         </footer>
       </div>
     </div>
+
+    <script>
+      // Change the nav background on scroll-behavior
+      var nav = document.getElementsByTagName("nav")[0];
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          nav.style.background = "white";
+        } else {
+          nav.style.background = "transparent";
+        }
+      });
+
+      //Make responsive nav
+      var menuHolder = document.getElementsByClassName("lg:hidden")[0];
+      var menu = menuHolder.children[0];
+      var mobileNav = document.getElementsByClassName("mobile-nav")[0];
+      var menuIcon = menu.innerHTML;
+      menu.addEventListener("click", function () {
+        if (mobileNav.classList.contains("showing")) {
+          mobileNav.classList.remove("showing");
+          mobileNav.style.display = "none";
+          menu.innerHTML = menuIcon;
+        } else {
+          mobileNav.classList.add("showing");
+          mobileNav.style.display = "block";
+          menu.innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
+        }
+      });
+    </script>
   </body>
 </html>
