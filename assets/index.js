@@ -30,6 +30,13 @@ window.onload = function () {
     imageBtn.parentElement.children[1].classList.add("product-category");
     imageBtn.firstElementChild.classList.add("product-image");
 
+    let orderButtons = document.getElementsByClassName("whatsapp-btn");
+    Array.from(orderButtons).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        imageBtn.click();
+      });
+    });
+
     //Display modal and its info
     imageBtn.addEventListener("click", function () {
       let modalImage, modalCategory, modalName, modalPrice, modalDescription;
@@ -59,6 +66,17 @@ window.onload = function () {
       productDescription =
         imageBtn.parentElement.nextElementSibling.children[1].textContent;
       modalDescription.textContent = productDescription;
+
+      //Order button for modal
+      var modalOrder = document.getElementById("modal-order");
+      var message = `Hello, I would like to order the ${productName.trim()} listed at ${productPrice.trim()}.\n (Category: ${productCategory.trim()}, Size: [SIZE], Quantity: 1).\n My name is: [YOUR NAME] and my Address is: [DELIVERY ADDRESS].\n Thank you.`;
+      var newmesssage = message.trim().replace(/ /g, "%20");
+      var link = document.createElement("a");
+      link.href = `https://wa.me/+254799856601?text=${newmesssage}`;
+      link.target = "_blank";
+      modalOrder.addEventListener("click", function () {
+        link.click();
+      });
     });
   });
 
