@@ -13,7 +13,7 @@ window.onload = function () {
     }
   });
 
-  //Set id of the h3 to product-name
+  //Set class of the h3 to product-name
   infoDivArray.forEach(function (div) {
     let info = div.firstElementChild.children;
     info[0].classList.add("product-name");
@@ -32,9 +32,7 @@ window.onload = function () {
 
     let orderButtons = document.getElementsByClassName("whatsapp-btn");
     Array.from(orderButtons).forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        imageBtn.click();
-      });
+      btn.style.display = "none";
     });
 
     //Display modal and its info
