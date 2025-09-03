@@ -57,9 +57,9 @@ window.onload = function () {
           .textContent;
       productPrice =
         imageBtn.parentElement.nextElementSibling.firstElementChild.children[1]
-          .textContent;
+          .innerHTML;
       modalName.textContent = productName;
-      modalPrice.textContent = productPrice;
+      modalPrice.innerHTML = productPrice;
 
       productDescription =
         imageBtn.parentElement.nextElementSibling.children[1].textContent;
@@ -101,17 +101,17 @@ window.onload = function () {
         Array.from(articleList).forEach(function (a) {
           a.style.display = "block";
         });
-      } else if (filter.textContent.trim() == "Hoodies") {
+      } else if (filter.textContent.trim() == "set") {
         Array.from(articleList).forEach(function (a) {
-          if (!(a.dataset.category.trim() == "hoods")) {
+          if (!(a.dataset.category.trim() == "set")) {
             a.style.display = "none";
           } else {
             a.style.display = "block";
           }
         });
-      } else if (filter.textContent.trim() == "Tops") {
+      } else if (filter.textContent.trim() == "pants") {
         Array.from(articleList).forEach(function (a) {
-          if (!(a.dataset.category.trim() == "tops")) {
+          if (!(a.dataset.category.trim() == "pants")) {
             a.style.display = "none";
           } else {
             a.style.display = "block";
